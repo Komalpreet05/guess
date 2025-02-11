@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const images = [
   "/images/image1.png",
   "/images/image2.JPG",
-  "/images/image3.JPG",
+
   "/images/image4.JPG",
   "/images/image5.JPG",
   "/images/image6.png",
@@ -44,7 +44,7 @@ const BirthdayPage = ({ name }) => {
           }
           return (prevIndex + 1) % images.length;
         });
-      }, 7000); // Change image every 15 seconds
+      }, 5000); // Change image every 15 seconds
       return () => clearInterval(slideshowTimer);
     }
   }, [showImages]);
