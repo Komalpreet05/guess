@@ -20,6 +20,7 @@ const WelcomePage = () => {
 
   const currentDate = new Date();
   const targetDate = new Date("2025-02-10T23:59:59");
+  const unavailableDate = new Date("2025-02-12T23:59:59");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,6 +61,16 @@ const WelcomePage = () => {
           <div className="mt-4 text-lg text-gray-700">
             Time remaining: {timeRemaining}
           </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (currentDate > unavailableDate) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="text-center mt-10 bg-white p-6 rounded-lg shadow-lg">
+          Hope you enjoyed it, Don't forget to Check out next year.
         </div>
       </div>
     );
